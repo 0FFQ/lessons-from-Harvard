@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ButtonWhyPush</title>
+    <style>
+        body {
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            background-color:rgb(41, 41, 41)
+        }
+        button {
+            background-color: rgb(19, 19, 19);
+
+            padding: 100px;
+
+            font-size: 50px;
+
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+
+        function ButtonWhyPush() {
+            const item = document.querySelector('button');
+            if (item.innerHTML === 'Нажми') {
+                item.innerHTML = 'Зачем нажал!';
+            } else {
+                item.innerHTML = 'Нажми'
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('button').onclick = ButtonWhyPush;
+        });
+
+
+    </script>
+</head>
+<body>
+    <button>Нажми</button>
+</body>
+</html>
