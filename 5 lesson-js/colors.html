@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Colors</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        // Изменить цвет шритфа на Красный
+        document.querySelector("#red").onclick = function () {
+          document.querySelector("#hello").style.color = 'red';
+        };
+
+        // Изменить цвет шритфа на Синий 
+        document.querySelector("#blue").onclick = function () {
+          document.querySelector("#hello").style.color = 'blue';
+        };
+        
+        // Изменить цвет шритфа на Зелёный
+        document.querySelector("#green").onclick = function () {
+          document.querySelector("#hello").style.color = 'green';
+        };
+
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="hello">Hello!</h1>
+    <button data-color="red">Red</button>
+    <button data-color="blue">Blue</button>
+    <button data-color="green">Green</button>
+  </body> 
+</html>
