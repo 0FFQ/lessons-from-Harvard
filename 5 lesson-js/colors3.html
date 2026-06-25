@@ -3,10 +3,10 @@
   <head>
     <title>Colors</title>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        
-        document.querySelector('select').onchange
-
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("select").onchange = function () {
+          document.querySelector("#hello").style.color = this.value;
+        };
       });
     </script>
   </head>
