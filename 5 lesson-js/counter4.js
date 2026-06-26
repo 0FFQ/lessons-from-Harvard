@@ -3,16 +3,14 @@ if (!localStorage.getItem('counter')) {
 }
 
 function count() {
-  counter += 1;
-  document.querySelector("h1").innerHTML = counter;
-
-  if (counter % 10 === 0) {
-    alert(`Count is now ${counter}`);
-  }
+  let value = localStorage.getItem('counter');
+  value ++;
+ 
+  document.querySelector("h1").innerHTML = value;
+  localStorage.setItem('counter', value);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector('h1').innerHTML = localStorage.getItem('counter');
   document.querySelector("button").onclick = count;
-
-  setInterval(count, 1000);
 });
